@@ -89,7 +89,7 @@ if (isset($_POST['buy'])) {
             <strong>Energidryck</strong><br>
             <span class="description">Liquorice brownie dessert icing gummies brownie bear claw icing jelly-o. Apple pie caramels bear claw donut soufflé lemon drops ice cream croissant cake. Chocolate cake oat cake lemon drops apple pie tart biscuit gummi bears cake cotton candy. Wafer gingerbread danish tiramisu sweet roll cheesecake jelly-o. Gummies cake sugar plum sweet bear claw biscuit dragée marzipan. Candy canes carrot cake carrot cake gummi bears. Chocolate bar fruitcake dessert jujubes cupcake croissant. Marzipan dragée powder. Pie marshmallow marshmallow toffee tart ice cream marzipan tiramisu.</span>
             <span class="price">15:-</span>
-            <input type="text" name="productid" value="35">
+            <input type="text" name="productid" value="30">
             <input type="number" name="noOfProducts" value="1">
             <input type="submit" name="buy" value="Lägg till i korgen">
         </div>
