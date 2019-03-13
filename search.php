@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "classes/db.php";
+include "classes/dbSearch.php";
 include "classes/product.php";
 $products = new Product();
 $list_products;
