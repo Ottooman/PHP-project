@@ -26,7 +26,7 @@
                 <li class="Item" id="location"> <a href="#"> Store Locator</a><span class="icon"></span> <i class="fas fa-map-marker-alt"></i> </span></li>
                 <li class="Item" id="position"> <a href="#"> We are shipping to: Sweden</a><span class="icon"></span> <i class="fa fa-globe"></i> </span></li>
                 <li class="Item" id="shopping"> <a href="#"> Shopping Cart</a><span class="icon"></span> <i class="fa fa-shopping-bag"></i></span> </li> 
-                <li class="Item" id="admin"> <a href="#"> Log In/Register</a><span class="icon"></span> <i class="far fa-user"> </i></span></li>
+                <li class="Item" id="admin"> <a href="login.php"> Log In/Register</a><span class="icon"> <i class="far fa-user"> </i></span></li>
                 <li class="Item" id="search"> <a href="#"> Search</a><span class="icon"> <i class='fas fa-search'></i></span> </li>
             </ul>
 
@@ -54,7 +54,7 @@
 
    
        <div class="banner-image">
-       <img src="sU9bdi22.jpg" width="100%" height="auto" alt="fashion" >
+       <img src="Frontend/sU9bdi22.jpg" width="100%" height="auto" alt="fashion" >
        <div class="textarea">
        <h3 class="big-text"> NEW WINTER COLLECTION 2018/2019 </h3>
        <p class="jacket">Winter Jacket from <span class="p-jacket">24,99$</span></p>
@@ -66,35 +66,35 @@
     <div class="flex-container">
             <section class="produkter">
                 <div class="produkt-item">
-                    <img src="prova2red.jpg" >
+                    <img src="Frontend/prova2red.jpg" >
                     <p> Pris: 25€</p>
                 </div>
                 <div class="produkt-item">
-                        <img src="prova2red.jpg">
+                        <img src="Frontend/prova2red.jpg">
                         <p> Pris: 25€</p>
                     </div>
                     <div class="produkt-item">
-                            <img src="prova2red.jpg">
+                            <img src="Frontend/prova2red.jpg">
                             <p> Pris: 25€</p>
                         </div>
                         <div class="produkt-item">
-                                <img src="prova2red.jpg">
+                                <img src="Frontend/prova2red.jpg">
                                 <p> Pris: 25€</p>
                             </div>
                             <div class="produkt-item">
-                                <img src="prova2red.jpg">
+                                <img src="Frontend/prova2red.jpg">
                                 <p> Pris: 25€</p>
                             </div>
                             <div class="produkt-item">
-                                <img src="prova2red.jpg">
+                                <img src="Frontend/prova2red.jpg">
                                 <p> Pris: 25€</p>
                             </div>
                             <div class="produkt-item">
-                                <img src="prova2red.jpg">
+                                <img src="Frontend/prova2red.jpg">
                                 <p> Pris: 25€</p>
                             </div>
                             <div class="produkt-item">
-                                <img src="prova2red.jpg">
+                                <img src="Frontend/prova2red.jpg">
                                 <p> Pris: 25€</p>
                             </div>
 
