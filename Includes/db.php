@@ -3,7 +3,7 @@
  $host = "localhost";  
  $username = "root";  
  $password = "";  
- $database = "classicmodels";  
+ $database = "test";  
  $message = "";  
  try  
  {  
