@@ -27,7 +27,7 @@
                 <li class="Item" id="position"> <a href="#"> We are shipping to: Sweden</a><span class="icon"></span> <i class="fa fa-globe"></i> </span></li>
                 <li class="Item" id="shopping"> <a href="#"> Shopping Cart</a><span class="icon"></span> <i class="fa fa-shopping-bag"></i></span> </li> 
                 <li class="Item" id="admin"> <a href="login.php"> Log In/Register</a><span class="icon"> <i class="far fa-user"> </i></span></li>
-                <li class="Item" id="search"> <a href="#"> Search</a><span class="icon"> <i class='fas fa-search'></i></span> </li>
+                <li class="Item" id="search"> <a href="search.php"> Search</a><span class="icon"> <i class='fas fa-search'></i></span> </li>
             </ul>
 
         </div>
