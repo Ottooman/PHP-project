@@ -19,10 +19,18 @@ if (isset($_POST['action'])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Search function</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script>
+    <style>
+    input {
+        border-radius:10px;
+    }
+    .search {
+        cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <h1>Produkter</h1>
@@ -30,7 +38,7 @@ if (isset($_POST['action'])) {
 <form method="post">
     Sök:<br>
     <input type="text" name="search" placeholder="Skriv in sökord">
-    <input type="submit" name="action" value="Sök">
+    <input class="search" type="submit" name="action" value="Sök">
 </form>
 <pre>
 <?php 
