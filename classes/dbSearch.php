@@ -1,7 +1,7 @@
 <?php
 class DB {
     private $host = 'localhost';
-    private $db   = 'test';
+    private $db   = 'classicmodels';
     protected $user = 'root';
     private $pass = '';
     private $charset = 'utf8mb4';
