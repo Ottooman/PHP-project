@@ -17,8 +17,10 @@ class User {
         $stmt->execute();
 
         if($stmt->rowCount() > 0) {
-            $_SESSION['username'] = $_POST['username'];   //funkar inte att skapa Session
-            header("location:login_success.php");
+         //   $_SESSION['username'] = $_POST['username'];   //funkar inte att skapa Session
+          //  header("location:login_success.php");
+
+          echo 'correct';
         }
         else {
             echo 'incorrect!';
