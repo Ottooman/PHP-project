@@ -2,16 +2,16 @@
 
 $dbresult = [
     30 => [
-        'title' => 'Energidryck',
-        'price' => 15,
+        'title' => '1939 Chevrolet Deluxe Coupe',
+        'price' => 2000,
     ],
     35 => [
-        'title' => 'Coca cola',
-        'price' => 18,
+        'title' => '2002 Suzuki XREO',
+        'price' => 3000,
     ],
     40 => [
-        'title' => 'GB Sandwich',
-        'price' => 20,
+        'title' => '1996 Moto Guzzi 1100i',
+        'price' => 4000,
     ]
 ];
 
@@ -22,7 +22,7 @@ if(isset($_COOKIE["cart"])) {
 }
 
 if (isset($_POST['buy'])) {
-    echo "Användaren vill lägga till i korg.";
+    echo "Användaren lägger till produkter i varukorgen.";
     echo "<pre>";
     print_r($_POST);
     echo "</pre>";
@@ -43,23 +43,45 @@ if (isset($_POST['buy'])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Products</title>
+    <title>Varukorg</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    
     <style>
         .cart {
             width: 500px;
-            background-color: lightblue;
         }
+        .button {
+            border: none;
+            color: white;
+            padding: 5px 12px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 10px;
+            margin: 2px 2px;
+            cursor: pointer;
+            background-color: black;   
+            border-radius: 10px;
+        }
+
+        .varukorg {
+            font-size: 25px;
+        }
+
+        .information {
+            font-weight:bold;
+        }
+
     </style>
     <script src="main.js"></script>
 </head>
 <body>
     <div class="cart">
-        <strong>Varukorg</strong><br>
+        <strong class="varukorg">Varukorg</strong><br><br>
         <table>
             <tr>
-                <th>Titel</th>
+                <th>Produkt</th>
                 <th>Pris</th>
                 <th>Antal</th>
                 <th>Summa</th>
@@ -86,13 +108,15 @@ if (isset($_POST['buy'])) {
     </div>
     <form method="post">
         <div class="product">
-            <strong>Energidryck</strong><br>
-            <span class="description">Liquorice brownie dessert icing gummies brownie bear claw icing jelly-o. Apple pie caramels bear claw donut soufflé lemon drops ice cream croissant cake. Chocolate cake oat cake lemon drops apple pie tart biscuit gummi bears cake cotton candy. Wafer gingerbread danish tiramisu sweet roll cheesecake jelly-o. Gummies cake sugar plum sweet bear claw biscuit dragée marzipan. Candy canes carrot cake carrot cake gummi bears. Chocolate bar fruitcake dessert jujubes cupcake croissant. Marzipan dragée powder. Pie marshmallow marshmallow toffee tart ice cream marzipan tiramisu.</span>
-            <span class="price">15:-</span>
+            <tr>
+            <span class="information">Information:</span>
+            </tr>
+            <span class="description">Classicmodels produkter.</span><br>
             <input type="text" name="productid" value="30">
             <input type="number" name="noOfProducts" value="1">
-            <input type="submit" name="buy" value="Lägg till i korgen">
+            <input class="button" type="submit" name="buy" value="Lägg till i korgen">
         </div>
+    
     </form>
 </body>
 </html>
