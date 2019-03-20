@@ -16,11 +16,15 @@ class User {
         $stmt->bindParam(2, $password);
         $stmt->execute();
 
-        if($stmt->rowCount() > 0) {
+        if($stmt->rowCount() == 1) {
             $_SESSION['username'] = $_POST['username'];   //funkar inte att skapa Session
             header("location:login_success.php");
 
          // echo 'correct';
+        }
+        else if ($stmt->rowCount() == 0) {
+           $query = $this->db->prepare('INSERT INTO users (username, password) VALUES (:username, :password)');
+           $query->execute(array(':username' => $username,':password' => $password));
         }
         else {
             echo 'incorrect!';
@@ -29,7 +33,7 @@ class User {
        else {
            echo 'Please enter username and pass';
        }
+       
    }
 }
 
-?>

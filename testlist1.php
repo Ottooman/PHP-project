@@ -14,9 +14,20 @@ class Listan {
         while ($row = $stmt->fetch()) {
             ?>
             <a href="?ciao=<?php echo $row['productLine']; ?>"><?php echo $row['productLine']; ?></a><br>
+            <style type="text/css">
+            a {
+                color: black;
+                border: solid black 1px;
+                text-decoration: none;
+                display: inline-block;
+                width: 10%;
+                margin: 5px;
+                box-sizing: border-box;
+            }
+            </style>
             <?php
         }
-        
+        ?><hr><?php   
 }
 
     public function Products() {
@@ -26,22 +37,28 @@ class Listan {
             $stmt->execute(['productLine' => $ciao]);
             while ($row = $stmt->fetch()) {
                 ?>
-                <a href="testlist2.php?product=<?php echo $row['productCode']; ?>"><?php echo $row['productName']; ?></a> - <?php echo $row['productLine']; ?><br>
+                <a href="testlist2.php?product=<?php echo $row['productCode']; ?>"><?php echo $row['productName']; ?></a> 
+                
                 <?php
             }
         } else {
             echo "Välj en kategori.<br>";
         }
+        
     }
+
+    
     }
 
       $obj = new Listan();
       $obj->ListaProducts();
       $obj->Products();
 
+      
 
+      ?>
+     
 
-  
     
 
   
