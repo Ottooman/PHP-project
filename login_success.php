@@ -10,6 +10,6 @@ session_start();
  {  
      // header("location:inl_upp.php");  
 
-     echo 'funkar inte';
+     echo 'Du måste logga in först!';
  }  
  ?> 
