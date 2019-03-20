@@ -1,14 +1,31 @@
 <?php  
 
+include_once 'registration.php';
 include_once 'User.php';
 
- if(isset($_POST['login'])) {
+
+ if(isset($_POST['SignIn'])) {
       $username = $_POST['username'];
       $password = $_POST['password'];
+      
+      $obj = new Registration();
+      $obj->Registration($username, $password);
+     }
 
-      $obj = new User();
-      $obj->Login($username, $password);
- }
+     if(isset($_POST['login'])) {
+          $username = $_POST['username'];
+          $password = $_POST['password'];
+          
+          $obj = new User();
+          $obj->Login($username, $password);
+         }
+
+
+           
+     
+     
+
+ 
 
      
    
@@ -35,6 +52,7 @@ include_once 'User.php';
                                 <input type="password" class="form-control" name="password" placeholder="Password">
                             </div>
                             <input type="submit" name="login" value="login">
+                            <input type="submit" name="SignIn" value="SignIn">
                         </form>
                     </div>
                 </div>

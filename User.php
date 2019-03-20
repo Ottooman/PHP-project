@@ -1,10 +1,8 @@
 <?php
-include 'classes/dbSearch.php';
-session_start();
+include_once 'classes/dbSearch.php';
 
 class User {
     private $db;
-
     public function __construct() {
         $obj = New DB();
         $this->db = $obj->pdo;
@@ -15,25 +13,25 @@ class User {
         $stmt->bindParam(1, $username);
         $stmt->bindParam(2, $password);
         $stmt->execute();
-
         if($stmt->rowCount() == 1) {
             $_SESSION['username'] = $_POST['username'];   //funkar inte att skapa Session
             header("location:login_success.php");
-
          // echo 'correct';
         }
-        else if ($stmt->rowCount() == 0) {
-           $query = $this->db->prepare('INSERT INTO users (username, password) VALUES (:username, :password)');
-           $query->execute(array(':username' => $username,':password' => $password));
+        elseif ($stmt->rowCount() == 0) {
+            echo 'It does not exist in the database, please Sign In first';
         }
-        else {
-            echo 'incorrect!';
-        }
+        
        }
-       else {
-           echo 'Please enter username and pass';
-       }
+       
        
    }
 }
+
+        
+       
+       
+       
+   
+
 
