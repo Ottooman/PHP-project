@@ -17,7 +17,7 @@ class Registration {
             if($stmt->rowCount() == 0) {
                 $query = $this->db->prepare('INSERT INTO users (username, password) VALUES (:username, :password)');
                 $query->execute(array(':username' => $username,':password' => $password));
-                echo '<h1>Thanks for the subscription</h1>';
+                header("location:inl_upp.php");;
             }
     }
 
