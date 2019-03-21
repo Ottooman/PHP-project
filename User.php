@@ -22,16 +22,23 @@ class User {
         elseif ($stmt->rowCount() == 0) {
             echo 'It does not exist in the database, please Sign In first';
         }
-        
-       }
-       
-       
-   }
+
+    }
+
+}
+
+        public function Error() {
+            if(empty($username) || empty($password)) {
+                echo 'Du måste skriva in password eller username';
+            }
+}
+
 }
 
         
        
-       
+  
+
        
    
 

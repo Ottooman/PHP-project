@@ -18,6 +18,7 @@ include_once 'User.php';
           
           $obj = new User();
           $obj->Login($username, $password);
+          $obj->Error();
          }
 
 

@@ -20,7 +20,16 @@ class Registration {
                 $query->execute(array(':username' => $username,':password' => $password));
                 header("location:inl_upp.php");
             }
+
+            if($stmt->rowCount() > 0) {
+                echo 'd finns redan';
+            }
+            
+
+            
     }
 
+}  
 }
-}
+
+    
