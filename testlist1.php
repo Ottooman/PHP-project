@@ -15,15 +15,13 @@ class Listan {
             ?>
             <a href="?ciao=<?php echo $row['productLine']; ?>"><?php echo $row['productLine']; ?></a><br>
             <style type="text/css">
-            a {
-                color: black;
-                border: solid black 1px;
-                text-decoration: none;
-                display: inline-block;
-                width: 10%;
-                margin: 5px;
-                box-sizing: border-box;
-            }
+                a {
+                    color: rgb(82, 60, 60);
+                     text-decoration: none;
+                        font-family: Felix Titling;
+                            font-weight: 400;
+                                font-size: 16px;
+                }
             </style>
             <?php
         }
@@ -37,12 +35,12 @@ class Listan {
             $stmt->execute(['productLine' => $ciao]);
             while ($row = $stmt->fetch()) {
                 ?>
-                <a href="testlist2.php?product=<?php echo $row['productCode']; ?>"><?php echo $row['productName']; ?></a> 
+                <a href="testlist2.php?product=<?php echo $row['productCode']; ?>"><?php echo $row['productName']; ?></a> <br>
                 
                 <?php
             }
         } else {
-            echo "Välj en kategori.<br>";
+            echo "här kommer finnas products ";
         }
         
     }

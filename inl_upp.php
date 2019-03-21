@@ -39,7 +39,7 @@
         
     <div class="navigation">
         <ul class="meny">
-                <li class="menu_item"> <a href="#"> New Arrivals</a>
+                <li class="menu_item"> <a href="testlist1.php"> Listan</a>
                     <li class="menu_item"> <a href="#"> Sale</a>
                         <li class="menu_item"> <a href="#"> Butik </a>
                 <li class="menu_item"> <a href="#"> Man</a>

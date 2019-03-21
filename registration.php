@@ -10,6 +10,7 @@ class Registration {
 
     public function Registration($username, $password) {
         if(!empty($username) && !empty($password)) {
+            $stmt = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
             $stmt = $this->db->prepare("SELECT * FROM users WHERE username =? AND password =?");
             $stmt->bindParam(1, $username);
             $stmt->bindParam(2, $password);
@@ -17,7 +18,7 @@ class Registration {
             if($stmt->rowCount() == 0) {
                 $query = $this->db->prepare('INSERT INTO users (username, password) VALUES (:username, :password)');
                 $query->execute(array(':username' => $username,':password' => $password));
-                header("location:inl_upp.php");;
+                header("location:inl_upp.php");
             }
     }
 

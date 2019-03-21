@@ -9,13 +9,14 @@ class User {
     }
    public function Login($username, $password) {
        if(!empty($username) && !empty($password)) {
+        $stmt = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
         $stmt = $this->db->prepare("SELECT * FROM users WHERE username =? AND password =?");
         $stmt->bindParam(1, $username);
         $stmt->bindParam(2, $password);
         $stmt->execute();
         if($stmt->rowCount() == 1) {
             $_SESSION['username'] = $_POST['username'];   //funkar inte att skapa Session
-            header("location:inl_upp.php");
+            header("location:login_success.php");
          // echo 'correct';
         }
         elseif ($stmt->rowCount() == 0) {
